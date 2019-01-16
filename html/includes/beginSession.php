@@ -10,7 +10,7 @@
 	// logged out:
 	// $_SESSION = [];
 
-	require('../mysqli_connect.php');
+	require('mysqli_connect.php');
 
 	// Check for a new language ID
 	if (isset($_GET['languageID']) && filter_var($_GET['languageID'], FILTER_VALIDATE_INT, array('min_range' => 1))) {
