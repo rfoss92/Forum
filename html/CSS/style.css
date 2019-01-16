@@ -1,0 +1,252 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+	font-family:verdana, arial, helvetica, sans-serif;
+	font-size: 16px; 
+	color:#333;
+	background-color:white;
+}
+
+.error {
+	color:#FF0033;
+	font-size:14px;
+}
+h1 {
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font-size:28px;
+	line-height:28px;
+	font-weight:900;
+	color:#ccc;
+}
+p {
+	font: verdana, arial, helvetica, sans-serif;
+	margin:24px 0px 24px 0px;
+	padding:0px;
+	line-height: 1.5em;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+	color:black;
+	font-size:11px;
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+}
+a:hover {
+	text-decoration: none;
+}
+h1 a {
+  color: #303030;     
+}
+h1 a:hover {
+  color: #1279be;    
+}
+h2 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 auto 24px;
+}
+
+/* NAVBAR */
+
+nav {
+  margin: 25px 0;
+  overflow: hidden;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-around;    
+}
+.navbar {
+	margin: 0;
+  overflow: visible;
+}
+.nav-title {
+  color: #303030;
+  font-size: 36px;
+  font-weight: 700;
+}
+.nav-button {
+  background-color: white;
+  border: 2px solid #D3D3D3;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 16px;
+}
+.nav-menu {
+  float: right;
+  margin-left: 30px;
+}
+
+/* HEADER */
+
+header {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/laptop.jpg') no-repeat;    
+  background-size: cover;
+  padding: 20px;
+  color: white;
+  line-height: 1.636364em;
+  font-weight: bold;    
+  font-size: 20px;
+}
+.header-button {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  background: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 24px;
+  border: 2px solid;  
+}
+
+.content {
+	margin-top: 100px;
+	margin-bottom: 100px;
+  background-color: transparent;
+}
+
+.newThread, .newThread a {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* FEATURED PAGES */
+
+.featured-page-area {
+  padding: 60px 24px 12px 24px;
+  background: #f8f8f8;       
+}   
+.featured-page {
+  padding-bottom: 24px;
+}
+.more-link {
+  border-bottom: 1px solid #c5c5c5;   
+  color: #1279be;       
+  font-weight: bold;    
+}
+.more-link:hover {
+  color: #303030;; 
+  border-bottom: 1px solid #303030;;         
+}
+
+/* WIDGETS */
+.widget-area {
+  padding: 60px 24px 12px 24px;      
+} 
+ul.widget-news-list {
+  padding: 0;
+}
+.widget-news-list li {
+  list-style: none;
+  padding: 12px 0;
+}
+.date {
+  font-size: .875em;
+  line-height: 1.71429em;
+  color: #757575;
+  font-weight: 100;
+}
+
+/* TESTIMONIAL */
+
+.testimonial-area {
+  padding: 60px 24px 12px 24px;
+  background: #f8f8f8;       
+}   
+.testimonial-wrapper p {
+  margin-top: 0;
+}
+
+/* FOOTER */
+
+.footer-area {
+  padding: .1px 24px 30px 24px;
+  background: #303030; 
+  display: flex;     
+} 
+.contact-map {
+  max-width: 100%;
+}
+.footer-area h2, .footer-area p, .footer-area section {
+  color: #c5c5c5;
+}
+.footer-area a {
+  color: white;
+}
+.footer-area a:hover {
+  color: #c5c5c5;
+}
+.footer-area ul {
+  padding: 0;
+}
+.footer-area li {
+  padding: 12px 0;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  list-style: none;
+}
+.footer-text h2 {
+  margin-top: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 100px 0;
+  }
+  .intro-wrapper {
+    width: 1135px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;         
+  }
+  .featured-page-area, .widget-area, .testimonial-area, .footer-area, .blog-area {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;    
+  }     
+  .featured-page-wrapper, .widget-wrapper, .testimonial-wrapper, .footer-wrapper {
+    width: 1140px;
+    display: flex; 
+    justify-content: space-between;  
+  }    
+  .blog-wrapper {
+    width: 1140px;
+    display: flex; 
+    justify-content: space-around;
+  }
+  .blog-button {
+    margin-top: 16px;
+  }  
+  .nav-wrapper {
+    padding: 0 90px;
+    width: 930px;
+    display: flex; 
+    justify-content: space-between;          
+  }
+  .featured-page, .widget-text, .testimonial-text, .footer-text {
+    float: left;
+    width: 330px; 
+    margin-right: 60px;   
+  }    
+  .featured-page:nth-of-type(3n+1), .widget-text:nth-of-type(3n+1) {
+    clear: left;
+  }
+  .featured-page:nth-of-type(3n+3), .widget-text:nth-of-type(3n+3) {
+    margin-right: 0px;    
+  }
+  .testimonial-wrapper {
+    height: 108px;
+  }
+  .footer-text h2 {
+    margin-top: 48px;
+  }
+  .footer-area {
+    padding: 30px 24px;  
+  }            
+}

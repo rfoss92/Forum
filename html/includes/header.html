@@ -1,0 +1,65 @@
+<?php 
+    include('beginSession.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title><?php echo $words['title']; ?></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="nav-title" href="index.php">THE FORUM</a>
+            </div>
+            <div id="navbar">
+              <ul class="nav navbar-nav nav-menu">
+                <?php // Default links
+
+                echo '<li><a href="threads.php">' . $words['view_threads'] . '</a></li>';
+
+                // Display links based upon login status:
+                if (isset($_SESSION['user_id'])) {
+                  echo '<li><a href="logout.php">' . $words['logout'] . '</a></li>';
+                  echo '<li><a href="change_password.php" title="Change Your Password">Change Password</a></li>';
+                  echo '<li><a href="forgot_password.php" title="Forgot Password">Forgot Password</a></li>';                  
+                } else {
+                  // Register and login links:
+                  echo '<li><a href="register.php">' . $words['register'] . '</a></li>
+                  <li><a href="login.php">' . $words['login'] . '</a></li>';
+                }
+
+                // if (isset($_SESSION['user_level'])) {
+                //   echo '<li><a href="view_users.php" title="View All Users">View Users</a></li>';
+                //   echo '<li><a href="#">Admin Page</a></li>';
+                // }
+                        
+                // Retrieve all the languages
+                echo '<li class="dropdown"><a href="threads.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' . $words['language'] . ' <span class="caret"></span></a>
+                <ul class="dropdown-menu">';
+
+                $query = "SELECT lang_id, lang FROM languages ORDER BY lang_eng ASC";
+                $response = mysqli_query($dbc, $query);
+
+                if (mysqli_num_rows($response) > 0) {
+                  while ($menu_row = mysqli_fetch_array($response, MYSQLI_NUM)) {
+                    echo '<li><a href="threads.php?languageID=' . $menu_row[0] . '">' . $menu_row[1] . '</a></li>';
+                  }
+                }
+                mysqli_free_result($response);
+
+                ?>
+                </ul></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
