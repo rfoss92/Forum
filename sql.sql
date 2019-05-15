@@ -75,24 +75,24 @@ PRIMARY KEY (word_id),
 UNIQUE (lang_id)
 );
 
-INSERT INTO languages (lang, lang_eng) VALUES
-('English', 'English'),
-('Português', 'Portuguese'),
-('Français', 'French'),
-('Norsk', 'Norwegian'),
-('Romanian', 'Romanian'),
-('Ελληνικά', 'Greek'),
-('Deutsch', 'German'),
-('Srpski', 'Serbian'),
-('日本語', 'Japanese'),
-('Nederlands', 'Dutch');
+INSERT INTO languages (lang_id, lang, lang_eng) VALUES
+(1, 'English', 'English'),
+(2, 'Português', 'Portuguese'),
+(3, 'Français', 'French'),
+(4, 'Norsk', 'Norwegian'),
+(5, 'Romanian', 'Romanian'),
+(6, 'Ελληνικά', 'Greek'),
+(7, 'Deutsch', 'German'),
+(8, 'Srpski', 'Serbian'),
+(9, '日本語', 'Japanese'),
+(10, 'Nederlands', 'Dutch');
 
 INSERT INTO users (lang_id, time_zone, username, pass, email) VALUES
-(1, 'US/Eastern', 'troutster', '', 'email@example.com'),
-(7, 'Europe/Berlin', 'Ute', '', 'email1@example.com'),
-(4, 'Europe/Oslo', 'Silje', '', 'email2@example.com'),
-(2, 'America/Sao_Paulo', 'João', '', 'email3@example.com'),
-(1, 'Pacific/Auckland', 'kiwi', '', 'kiwi@example.org');
+(1, 1, 'US/Eastern', 'troutster', '', 'email@example.com'),
+(2, 7, 'Europe/Berlin', 'Ute', '', 'email1@example.com'),
+(3, 4, 'Europe/Oslo', 'Silje', '', 'email2@example.com'),
+(4, 2, 'America/Sao_Paulo', 'João', '', 'email3@example.com'),
+(5, 1, 'Pacific/Auckland', 'kiwi', '', 'kiwi@example.org');
 
 INSERT INTO words VALUES
 (NULL,1, 'PHP and MySQL for Dynamic Web Sites: The Forum!', '<p>Welcome to the site! Please use the links above</p>', 'Home', 'View Threads', 'Language', 'Register', 'Login', 'Logout', 'New Thread', 'Subject', 'Body', 'Submit', 'Posted on', 'Posted by', 'Replies', 'Latest Reply', 'Post a Reply'),

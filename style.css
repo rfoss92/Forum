@@ -83,11 +83,14 @@ nav {
   float: right;
   margin-left: 30px;
 }
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 
 /* HEADER */
 
 header {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('html/img/laptop.jpg') no-repeat;    
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('img/laptop.jpg') no-repeat;    
   background-size: cover;
   padding: 20px;
   color: white;

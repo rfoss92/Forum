@@ -48,16 +48,15 @@
 
                 $query = "SELECT lang_id, lang FROM languages ORDER BY lang_eng ASC";
                 $response = mysqli_query($dbc, $query);
-
                 if (mysqli_num_rows($response) > 0) {
                   while ($menu_row = mysqli_fetch_array($response, MYSQLI_NUM)) {
                     echo '<li><a href="threads.php?languageID=' . $menu_row[0] . '">' . $menu_row[1] . '</a></li>';
                   }
                 }
                 mysqli_free_result($response);
-
+                '</ul></li>';
                 ?>
-                </ul></li>
+
               </ul>
             </div>
         </div>

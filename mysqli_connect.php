@@ -1,5 +1,10 @@
 <?php
 
+// define('DB_USER', 'Admin');
+// define('DB_PASSWORD', 'Admin');
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'forum');
+
 define('DB_USER', 'be119c2961b98f');
 define('DB_PASSWORD', '6ec874c8');
 define('DB_HOST', 'us-cdbr-iron-east-02.cleardb.net');

@@ -15,7 +15,7 @@
 <section class="featured-page-area">
   <section class="featured-page-wrapper">
     <section class="featured-page">
-      <img src="html/img/image3.jpg">
+      <img src="img/image3.jpg">
       <h1><a href="threads.php">MY FIRST POST</a></h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -27,7 +27,7 @@
     </section>
 
     <section class="featured-page">
-      <img src="html/img/image2.jpg">  
+      <img src="img/image2.jpg">  
       <h1><a href="threads.php">MY SECOND POST</a></h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -39,7 +39,7 @@
     </section>
 
     <section class="featured-page">
-      <img src="html/img/image1.jpg">  
+      <img src="img/image1.jpg">  
       <h1><a href="threads.php">MY THRID POST</a></h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
