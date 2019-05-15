@@ -29,7 +29,6 @@ if (isset($_SESSION['user_id'])) {
 // when the thread was first posted, when it was last replied to, and how many replies it's had
 $query = "SELECT t.thread_id, t.subject, username, COUNT(post_id) - 1 AS responses, MAX(DATE_FORMAT($last, '%e-%b-%y %l:%i %p')) AS last, MIN(DATE_FORMAT($first, '%e-%b-%y %l:%i %p')) AS first FROM threads AS t INNER JOIN posts AS p USING (thread_id) INNER JOIN users AS u ON t.user_id = u.user_id WHERE t.lang_id = {$_SESSION['languageID']} GROUP BY (p.thread_id) ORDER BY last DESC";
 
-$query2 = "SELECT t.thread_id, t.subject, username, COUNT(post_id) - 1 AS responses, MAX(DATE_FORMAT($last, '%e-%b-%y %l:%i %p')) AS last, MIN(DATE_FORMAT($first, '%e-%b-%y %l:%i %p')) AS first FROM threads AS t INNER JOIN posts AS p USING (thread_id) INNER JOIN users AS u ON t.user_id = u.user_id WHERE t.lang_id = 4 GROUP BY (p.thread_id) ORDER BY last DESC";
 $response = mysqli_query($dbc, $query);
 
 if (mysqli_num_rows($response) > 0) {
