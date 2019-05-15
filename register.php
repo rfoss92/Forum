@@ -87,9 +87,10 @@
 	}
 ?>
 
+<p>(Registration is disabled for this demo)</p>
 <h1>Register</h1>
 <form action="register.php" method="post">
-	<fieldset>
+	<fieldset disabled="disabled">
 
 	<p><strong>First Name:</strong> <input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($trimmed['first_name'])) echo $trimmed['first_name']; ?>"></p>
 
